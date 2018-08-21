@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
-    "build": ""
+    "start": "node --experimental-modules index.mjs",
+    "build": "cd src && node-gyp configure && node-gyp build"
   },
   "keywords": [
     "C++",
@@ -13,5 +14,8 @@
     "Linux"
   ],
   "author": "Chugunov Roman",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-gyp": "^3.8.0"
+  }
 }
