@@ -1,0 +1,17 @@
+{
+  "name": "loadfonts",
+  "version": "0.0.1",
+  "description": "C++ module that makes object of meta data of fonts",
+  "scripts": {
+    "build": ""
+  },
+  "keywords": [
+    "C++",
+    "nodejs",
+    "ttf",
+    "fonts",
+    "Linux"
+  ],
+  "author": "Chugunov Roman",
+  "license": "MIT"
+}
