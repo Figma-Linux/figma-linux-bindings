@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/**/*.h",
+                "${workspaceFolder}/node_modules/nan",
+                "/usr/include/freetype2",
+                "/usr/include/node",
+                "/usr/include/linux",
+                "${workspaceFolder}/node_modules/nan"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
