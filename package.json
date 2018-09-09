@@ -15,7 +15,7 @@
     "Linux"
   ],
   "author": "Chugunov Roman",
-  "license": "MIT",
+  "license": "gpl-2.0",
   "devDependencies": {
     "node-gyp": "^3.8.0"
   },
