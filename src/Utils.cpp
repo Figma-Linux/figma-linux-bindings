@@ -66,7 +66,7 @@ vector<string> readDirRecursice(const char *path) {
 		exit(1);
 	}
 
-	regex ext(".+\\.(tt[fc]|otf|afm)");
+	regex ext(".+\\.(tt[fc]|otf)");
 	struct dirent *entry;
 	vector<string> files;
 

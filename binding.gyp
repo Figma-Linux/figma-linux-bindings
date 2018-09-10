@@ -3,6 +3,7 @@
 		{
 			"target_name": "loadfonts",
 			"include_dirs": [
+				"/usr/include/freetype2/",
 				"/usr/local/include/freetype2",
 				"<!(node -e \"require('nan')\")"
 			],
