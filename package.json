@@ -1,11 +1,11 @@
 {
   "name": "loadfonts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules index.mjs",
     "build": "node-gyp configure && node-gyp build",
-    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild --target=3.0.0-beta.6 --arch=x64 --dist-url=https://atom.io/download/electron"
+    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild --target=3.0.0-beta.10 --arch=x64 --dist-url=https://atom.io/download/electron"
   },
   "keywords": [
     "C++",

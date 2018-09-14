@@ -5,9 +5,9 @@
 
 #include "Utils.h"
 
-using Nan::To;
 using Nan::Utf8String;
-using Nan::TypeError;
+using Nan::ThrowError;
+using Nan::New;
 using v8::String;
 using std::string;
 using std::vector;
@@ -61,18 +61,21 @@ vector<string> readDirRecursice(const char *path) {
 	DIR *dir;
 
 	if (!(dir = opendir(path))) {
+		char *err = new char[strlen(path) + 25];
+		sprintf(err, "Cannot open directory: %s", path);
+
 		perror("diropen");
-		TypeError("open dir error");
+		ThrowError(New<String>(err).ToLocalChecked());
 		exit(1);
 	}
 
-	regex ext(".+\\.(tt[fc]|otf)");
+	regex ext(".+\\.(tt[fc]|otf|pfb)");
 	struct dirent *entry;
 	vector<string> files;
 
 	while ((entry = readdir(dir)) != NULL) {
 		if (strcmp(entry->d_name, "..") != 0 && strcmp(entry->d_name, ".") != 0) {
-			char *p = new char[strlen(path)*2+2];
+			char *p = new char[strlen(path) + strlen(entry->d_name) + 2];
 
 			strcpy(p, path);
 			strcat(p, "/");

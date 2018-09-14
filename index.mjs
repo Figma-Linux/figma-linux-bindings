@@ -1,5 +1,13 @@
-import fonts from "./build/Release/loadfonts";
+import binding from './build/Release/loadfonts';
 
-console.log('fonts: ', fonts.getFonts([
-	"/usr/share/fonts"
-]));
+let fonts;
+
+try {
+	fonts = binding.getFonts([
+		'/usr/share/fonts',
+		`${process.env.HOME}/.local/share/fonts`
+	
+	]);
+} catch (error) {
+	console.log('\nfonts error: ', error);
+}
