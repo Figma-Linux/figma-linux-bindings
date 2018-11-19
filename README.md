@@ -118,17 +118,13 @@ Example:
 ```javascript
 import binding from './build/Release/loadfonts';
 
-let fonts; //  IFonts
+let fonts;
+let dirs = [
+  '/usr/share/fonts',
+  `${process.env.HOME}/.local/share/fonts`
+];
 
-try {
-	fonts = binding.getFonts([
-		'/usr/share/fonts',
-		`${process.env.HOME}/.local/share/fonts`
-	
-	]);
-} catch (error) {
-	console.log('\nfonts error: ', error);
-}
+binding.getFonts(dirs, (err, fonts) => {
+  console.log('fonts: ', fonts);
+});
 ```
-
-For now, this module is synchronous. Also module can not delete dublicate files from object.
