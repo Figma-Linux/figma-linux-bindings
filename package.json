@@ -4,8 +4,9 @@
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules index.mjs",
-    "build": "node-gyp configure && node-gyp build",
-    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild --target=3.0.0-beta.10 --arch=x64 --dist-url=https://atom.io/download/electron"
+    "build": "node-gyp configure && node-gyp build --static",
+    "build-dev": "node-gyp configure && node-gyp build --static --debug",
+    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild  --static --target=3.0.7 --arch=x64 --dist-url=https://atom.io/download/electron"
   },
   "keywords": [
     "C++",
@@ -20,6 +21,6 @@
     "node-gyp": "^3.8.0"
   },
   "dependencies": {
-    "nan": "^2.11.0"
+    "nan": "^2.11.1"
   }
 }

@@ -5,15 +5,6 @@
 
 #include "Utils.h"
 
-using Nan::Utf8String;
-using Nan::ThrowError;
-using Nan::New;
-using v8::String;
-using std::string;
-using std::vector;
-using std::regex;
-using std::regex_match;
-
 bool isDir(const string *path) {
 	DIR *dir;
 	bool exists = false;
