@@ -1,4 +1,4 @@
-import bindings from './build/Release/bindings';
+import bindings from '../build/Release/bindings';
 
 let fonts;
 let dirs = [
