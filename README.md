@@ -116,7 +116,7 @@ Example:
 # Usage
 
 ```javascript
-import binding from './build/Release/loadfonts';
+import * as binding from 'figma-linux-bindings';
 
 let fonts;
 let dirs = [
