@@ -1,6 +1,6 @@
 {
   "name": "figma-linux-bindings",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules index.mjs",
