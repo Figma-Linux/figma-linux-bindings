@@ -48,7 +48,7 @@ NAN_METHOD(getFonts) {
 	Local<Function> cb = To<Function>(info[1]).ToLocalChecked();
 	Callback *callback = new Callback(cb);
 
-	for (int i = 0; i < dirsArg->Length(); i++) {
+	for (uint32_t i = 0; i < dirsArg->Length(); i++) {
 		Utf8String str(dirsArg->Get(i)->ToString());
 		char *path = new char[string(*str).length() + 2];
 

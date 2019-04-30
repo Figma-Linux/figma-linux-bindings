@@ -4,10 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}",
-                "${workspaceFolder}/**/*.h",
+                "${workspaceFolder}/**/*",
                 "${workspaceFolder}/node_modules/nan",
                 "/usr/include/freetype2",
-                "/usr/include/node",
+                "/usr/include/nodejs/**/*",
                 "/usr/include/linux",
                 "${workspaceFolder}/node_modules/nan"
             ],

@@ -1,4 +1,6 @@
 node_modules
+.vscode/ipch
+deps/freetype-2.9/objs
 *.log
 dist
 build

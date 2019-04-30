@@ -52,11 +52,8 @@ vector<string> readDirRecursice(const char *path) {
 	DIR *dir;
 
 	if (!(dir = opendir(path))) {
-		char *err = new char[strlen(path) + 25];
-		sprintf(err, "Cannot open directory: %s", path);
-
+		printf("Cannot open directory: %s", path);
 		perror("diropen");
-		ThrowError(New<String>(err).ToLocalChecked());
 		exit(1);
 	}
 

@@ -5,7 +5,6 @@
 #include <dirent.h>
 #include <node.h>
 #include <ft2build.h>
-#include <freetype/ttunpat.h>
 #include FT_FREETYPE_H
 
 using std::string;

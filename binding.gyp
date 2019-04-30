@@ -1,14 +1,15 @@
 {
 	"targets": [
 		{
-			"target_name": "loadfonts",
+			"target_name": "bindings",
 			"include_dirs": [
 				"/usr/include/freetype2/",
 				"/usr/local/include/freetype2",
 				"<!(node -e \"require('nan')\")"
 			],
 			"libraries": [
-				"../lib/freetype2/libfreetype.so"
+				"../lib/freetype2/libfreetype.a",
+				"/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
 			],
 			"cflags": [
 				"-g",
@@ -22,9 +23,6 @@
 				"-static-libgcc",
 				"-static-libstdc++"
 			],
-			"link_settings": {
-				"libraries": ["-Wl,-rpath,/usr/lib/x86_64-linux-gnu/libstdc++.so.6"],
-			},
 			"sources": [
 				"src/main.cpp",
 				"src/Fonts.cpp",

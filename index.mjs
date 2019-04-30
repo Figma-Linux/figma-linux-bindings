@@ -1,4 +1,4 @@
-import binding from './build/Release/loadfonts';
+import bindings from './build/Release/bindings';
 
 let fonts;
 let dirs = [
@@ -6,7 +6,7 @@ let dirs = [
 	`${process.env.HOME}/.local/share/fonts`
 ];
 
-binding.getFonts(dirs, (err, fonts) => {
+bindings.getFonts(dirs, (err, fonts) => {
 	console.log('fonts: ', fonts);
 });
 
