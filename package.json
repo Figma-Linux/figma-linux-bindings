@@ -1,6 +1,6 @@
 {
-  "name": "bindings",
-  "version": "0.1.0",
+  "name": "figma-linux-bindings",
+  "version": "0.1.1",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules index.mjs",
@@ -24,7 +24,7 @@
     "Linux"
   ],
   "author": "Chugunov Roman",
-  "license": "gpl-2.0",
+  "license": "GPL-2.0",
   "devDependencies": {
     "node-gyp": "^3.8.0"
   },
