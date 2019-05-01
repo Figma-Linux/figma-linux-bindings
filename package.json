@@ -1,14 +1,17 @@
 {
   "name": "figma-linux-bindings",
   "main": "build/Release/bindings.node",
-  "version": "0.1.4",
+  "version": "0.1.10",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules test/index.mjs",
-    "build": "HOME=~/.electron-gyp node-gyp rebuild  --static --target=4.1.5 --arch=x64 --dist-url=https://atom.io/download/electron -j `nproc`",
-    "build-node": "node-gyp configure && node-gyp build --static -j `nproc`",
+    "build": "node-gyp configure && node-gyp build --static -j `nproc`",
     "build-dev": "node-gyp configure && node-gyp build --static --debug -j `nproc`",
-    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild  --static --target=4.1.5 --arch=x64 --dist-url=https://atom.io/download/electron -j `nproc`"
+    "rebuild": "HOME=~/.electron-gyp node-gyp rebuild  --static --target=$(../.bin/electron -v | tr -d v) --arch=x64 --dist-url=https://atom.io/download/electron -j `nproc`",
+    "install": "bash -c '[[ -d ../electron ]] && npm run rebuild || npm run build'"
+  },
+  "engines": {
+    "node": ">=10.11.0"
   },
   "repository": {
     "type": "git",
@@ -34,5 +37,6 @@
     "nan": "^2.11.1"
   },
   "types": "index.d.ts",
-  "deprecated": false
+  "deprecated": false,
+  "gypfile": true
 }
