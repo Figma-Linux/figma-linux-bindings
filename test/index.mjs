@@ -7,7 +7,8 @@ let dirs = [
 ];
 
 bindings.getFonts(dirs, (err, fonts) => {
-	console.log('fonts: ', fonts);
+	console.log('err: ', err);
+	console.log('fonts: ', fonts['/home/ruut/.local/share/fonts/Shree714.ttc']);
 });
 
 console.log('print first');

@@ -319,6 +319,7 @@
   FT_EXPORT_DEF( FT_Error )
   FT_Init_FreeType( FT_Library  *alibrary )
   {
+    printf("call FT_Init_FreeType from static library \n\n");
     FT_Error   error;
     FT_Memory  memory;
 
