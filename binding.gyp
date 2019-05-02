@@ -7,10 +7,10 @@
 				"/usr/local/include/freetype2",
 				"<!(node -e \"require('nan')\")"
 			],
-			"libraries": [
-				"../lib/freetype2/libfreetype.a",
-				"/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
-			],
+			# "libraries": [
+			# 	"../lib/freetype2/libfreetype.so.6",
+			# 	"/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
+			# ],
 			"cflags": [
 				"-g",
 				"-lstdc++",

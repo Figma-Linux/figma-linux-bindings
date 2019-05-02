@@ -1,7 +1,7 @@
 {
   "name": "figma-linux-bindings",
   "main": "build/Release/bindings.node",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules test/index.mjs",
@@ -35,7 +35,7 @@
     "node-gyp": "^3.8.0"
   },
   "dependencies": {
-    "nan": "^2.11.1"
+    "nan": "^2.13.2"
   },
   "types": "index.d.ts",
   "deprecated": false,
