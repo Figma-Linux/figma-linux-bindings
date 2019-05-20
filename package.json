@@ -1,14 +1,14 @@
 {
   "name": "figma-linux-bindings",
   "main": "build/Release/bindings.node",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "C++ module that makes object of meta data of fonts",
   "scripts": {
     "start": "node --experimental-modules test/index.mjs",
     "build": "node-gyp configure && node-gyp build --static -j `nproc`",
     "build-dev": "node-gyp configure && node-gyp build --static --debug -j `nproc`",
     "rebuild": "HOME=~/.electron-gyp node-gyp rebuild --target=4.1.5 --arch=x64 --dist-url=https://atom.io/download/electron --static -j `nproc`",
-    "install": "npm run rebuild",
+    "install": "bash -c '[[ -d ../electron ]] && npm run rebuild || npm run build'",
     "clear": "rm -rf ./build/*"
   },
   "engines": {
