@@ -1,5 +1,6 @@
 node_modules
 .vscode/ipch
+.vscode/vs*
 deps/freetype-2.9/objs
 *.log
 package-lock.json
